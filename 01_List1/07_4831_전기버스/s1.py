@@ -9,10 +9,10 @@ for bus_case in range (1, T + 1):
     K, N, M = map(int, input().split())
     charger_list = list(map(int, input().split())) #충전기 위치
     bus_list = [0] * (N + 1) #정류장 생성
-    counter = 0 #counter 생성
     for charger in charger_list: #정류장과 충전기 위치 표시
         bus_list[charger] = 1
     location = 0 #위치 생성
+    counter = 0  # counter 생성
     while location < N:
         for move in range(K, 0, -1):
             if location + move >= N:                #종점에 도달하면 위치를
