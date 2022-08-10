@@ -5,7 +5,7 @@ sys.stdin = open("input.txt")
 T = int(input())
 
 for bus_case in range (1, T + 1):
-    print(f'#{bus_case}', end = ' ')
+    print(f'#{bus_case}', end=' ')
     K, N, M = map(int, input().split())
     charger_list = list(map(int, input().split())) #충전기 위치
     bus_list = [0] * (N + 1) #정류장 생성

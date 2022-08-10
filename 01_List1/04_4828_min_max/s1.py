@@ -4,7 +4,7 @@ sys.stdin = open("input.txt")
 
 T = int(input())
 for test_case in range(1, T + 1):
-    print(f'#{test_case}', end = ' ')
+    print(f'#{test_case}', end=' ')
     N = int(input())
     num_list = list(map(int, input().split()))
     for i in range(N-1, 0, -1): #버블정렬

@@ -3,7 +3,7 @@ import sys
 sys.stdin = open("input.txt")
 
 for test_case in range(1, 11):
-    print(f'#{test_case}', end = ' ')
+    print(f'#{test_case}', end=' ')
     count = int(input())
     box_list = list(map(int, input().split()))
     while count > 0:

@@ -4,7 +4,7 @@ sys.stdin = open("input.txt")
 
 T = int(input())
 for test_case in range(1, T + 1):
-    print(f'#{test_case}', end = ' ')
+    print(f'#{test_case}', end=' ')
     N = int(input())
     cards = input()             #카드를 문자열로 받기
     card_list = [[0 for col in range(2)] for row in range(10)]  #카드 리스트 생성

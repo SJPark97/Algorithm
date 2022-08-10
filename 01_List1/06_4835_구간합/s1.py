@@ -4,7 +4,7 @@ sys.stdin = open("input.txt")
 
 T = int(input())
 for test_case in range(1, T + 1):
-    print(f'#{test_case}', end = ' ')
+    print(f'#{test_case}', end=' ')
     N, M = map(int, input().split())
     number_list = list(map(int, input().split()))
     number = [0] * (N-M+1)                      #M개씩 합쳐서 넣을 리스트 만들기
