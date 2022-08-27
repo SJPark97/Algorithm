@@ -21,4 +21,4 @@ for test_case in range(1, T + 1):
     #         difference = building[case] - building[case + 2]
     #     if difference > 0:
     #         count += difference
-    print(f'{count}')
+    print(count)
