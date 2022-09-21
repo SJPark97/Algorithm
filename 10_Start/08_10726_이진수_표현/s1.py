@@ -5,9 +5,8 @@
 
 def sol():
     n, m = map(int, input().split())
-    chk = bin(m)[2:]
     for i in range(n):
-        if not int(chk) & (1 << i):
+        if not m & (1 << i):
             print("OFF")
             return
     print("ON")
