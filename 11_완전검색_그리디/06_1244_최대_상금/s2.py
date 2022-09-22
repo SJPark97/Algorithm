@@ -20,10 +20,8 @@ def sol():
             continue
         max_cnt = nums[:l + 1].count(max_num)
         if max_cnt > 1 and t > 1:
-            if max_cnt > t:
-                nums = nums[:l + 1 - t] + sorted(nums[l + 1 - t:l + 1])[::-1] + nums[l + 1:]
-            else:
-                nums = nums[:l + 1 - max_cnt] + sorted(nums[l + 1 - max_cnt:l + 1])[::-1] + nums[l + 1:]
+            chg_num = min(max_cnt, t)
+            nums = nums[:l + 1 - chg_num] + sorted(nums[l + 1 - chg_num:l + 1])[::-1] + nums[l + 1:]
         nums[l], nums[max_index] = nums[max_index], nums[l]
         t -= 1
         l -= 1

@@ -1,13 +1,9 @@
 from itertools import combinations
 
 
-def chk(li):
-    return li[0] == li[1] == li[2] or li[0] + 2 == li[1] + 1 == li[2]
-
-
 def comb(li):
     for chk_list in combinations(sorted(li), 3):
-        if chk(chk_list):
+        if len(set(chk_list)) == 1 or chk_list[0] + 2 == chk_list[1] + 1 == chk_list[2]:
             return True
     return False
 
@@ -23,12 +19,10 @@ def sol():
         else:
             player_1.append(cards[i])
     for i in range(3, 7):
-        p1 = comb(player_1[:i])
-        p2 = comb(player_2[:i])
-        if p1:
+        if comb(player_1[:i]):
             answer = 1
             break
-        if p2:
+        if comb(player_2[:i]):
             answer = 2
             break
     print(answer)
