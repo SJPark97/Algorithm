@@ -5,8 +5,7 @@ def sol():
         chk_list.sort(reverse=True)
         distance, x, y = chk_list.pop()
         answer = atom_list[x][3] + atom_list[y][3]
-        chk = set()
-        chk.update((x, y))
+        chk = {x, y}
         while chk_list:
             d, x, y = chk_list.pop()
             if x not in chk and y not in chk:
